@@ -46,5 +46,6 @@ public class SingleDemo {
         // new 对象，分3步，1.分配对象的内存空间 2.初始化对象 3.设置instance指向刚刚分配的地址，此时instance!=null，
         // 由于指令重排 2 3颠倒，所以来获取的时候判断不为空，就返回了，但其实没有拿到真实的值，
         // 会发生线程安全问题,所以需要在 private static volatile SingleDemo instance = null; DCL + Volatile解决
+        // volatile满足JMM的两个条件，不满足原子性,所以是轻量级（乞丐版）的synchronized
     }
 }
