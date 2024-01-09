@@ -64,5 +64,6 @@ public class VolatileDemo {
         //TODO 如何解决原子性 2.1 sync 2.2 atomic
         System.out.println(Thread.currentThread().getName() +" atomicInteger finally value: "+myData.atomicInteger);
         // todo atomicInteger为什么可以解决线程问题，因为CAS->Unsafe类
+        //TODO  3.volatile 禁止指令重排,原理：在变量前加入volatile后，插入内存屏障，禁止指令重排
     }
 }
