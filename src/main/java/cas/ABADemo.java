@@ -49,5 +49,6 @@ public class ABADemo {
         //    false	User{username='li4', age=29}
         //TODO 解决ABA问题 ： 新增一种机制，那就是修改版本号（类似时间戳） 不仅是比较值，还要比较版本号 JUC atomicStampedReference class
 
+
     }
 }
