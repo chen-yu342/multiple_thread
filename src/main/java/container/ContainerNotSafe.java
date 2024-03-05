@@ -7,10 +7,10 @@ public class ContainerNotSafe {
     public static void main(String[] args) {
         //TODO 集合ArrayList<String>线程不安全的代码
         //TODO 出现java.util.ConcurrentModificationException，并发修改异常
-        //ArrayList<String> list = new ArrayList<>();
+        ArrayList<String> list = new ArrayList<>();
         // List<String> list = new Vector<String>();
         //List<String> list = Collections.synchronizedList(new ArrayList<String>());
-        CopyOnWriteArrayList<String> list = new CopyOnWriteArrayList<>();
+        //CopyOnWriteArrayList<String> list = new CopyOnWriteArrayList<>();
 
         for (int i = 0; i < 30; i++) {
             new Thread(() -> {

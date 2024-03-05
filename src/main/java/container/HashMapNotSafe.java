@@ -7,7 +7,7 @@ import java.util.concurrent.CopyOnWriteArraySet;
 
 public class HashMapNotSafe {
 
-    public static void main(String[] args) {
+    public static  void main(String[] args) {
         //TODO HashMap 线程不安全code,会出现并发修改异常 java.util.ConcurrentModificationException
         //HashMap<String,String> map = new HashMap<>();
         //TODO 解决 ConcurrentHashMap
