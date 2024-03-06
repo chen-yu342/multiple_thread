@@ -12,8 +12,10 @@ public class SpinLockDemo {
         System.out.println(Thread.currentThread().getName() + " come in");
         //如果是null 就把我自己放进去,atomicReference.compareAndSet(null,thread)是false
         while (!atomicReference.compareAndSet(null, thread)) {
-
+            System.out.println(Thread.currentThread().getName() +" compareAndSet is not null ");
         }
+
+        System.out.println(Thread.currentThread().getName() + " skip while loop");
     }
 
     public void myUnLock() {
